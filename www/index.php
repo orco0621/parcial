@@ -26,7 +26,7 @@
     <h1>ORLANDO ANDRES<br> CORREA DURAN</h1>
   </div>
   <Font color=red>Ingresa las 2 cifras a calcular:</Font><br>
-<form action="calculadora.php" method=post>
+<form action="index.php" method=post>
 <input type="text" name="cifra1" size="10" maxlength="10"><br>
 <input type="text" name="cifra2" size="10" maxlength="10"><br>
 <input type=submit name="sumar" value="Sumar">
@@ -42,3 +42,30 @@
 
 </body>
 </html>
+<?php 
+if($cifra1==0)
+{
+echo "ERROR 01: No ingreso la primer cifra.<br>";
+}
+if($cifra2==0)
+{
+echo "ERROR 02: No ingreso la segunda cifra.";
+}
+else
+{
+echo "Resultado de la operación:<br>";
+$resultadodivision=$cifra1/$cifra2;
+$resultadomultiplicacion=$cifra1*$cifra2;
+$resultadoresta=$cifra1-$cifra2;
+$resultadosuma=$cifra1+$cifra2;
+if($sumar)
+echo $resultadosuma;
+if($restar)
+echo $resultadoresta;
+if($multiplicar)
+echo $resultadomultiplicacion;
+if($dividir)
+echo $resultadodivision;
+}
+
+?>
